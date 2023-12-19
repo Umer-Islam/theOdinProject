@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 600px;
+
+  /*to make image responsive  */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* ------------------------- */
+}
+
+button {
+  font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+}
+ul {
+  font-weight: bold;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 8px 24px;
+  width: 400px;
+  margin-bottom: 16px;
+}
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  /* remove after everything is done */
+  background-color: gray;
+  padding: 10px;
+}
+/* first two links */
+.left-links {
+  display: flex;
+  gap: 20px;
+  margin-right: auto;
+  padding: 0px;
+}
+.right-links {
+  display: flex;
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+  padding: 0px;
+}
+.header ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ddd;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  margin: 0px;
+}
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  /* remove after everything is done */
+  background-color: gray;
+  padding: 10px;
+  margin-top: auto;
+}
+.footer ul {
+  list-style: none;
+}
