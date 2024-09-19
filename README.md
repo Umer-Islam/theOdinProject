@@ -1,2 +1,2 @@
 # theOdinProject
-all the projects from TheOdinProject foundations module are pushed here.
+All the projects from TheOdinProject foundations module are pushed here.
