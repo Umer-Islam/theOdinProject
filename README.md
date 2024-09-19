@@ -1,2 +1,2 @@
 # theOdinProject
-all the exercises from TheOdinProject foundations module are included.
+all the projects from TheOdinProject foundations module are pushed here.
