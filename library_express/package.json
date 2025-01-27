@@ -1,11 +1,11 @@
 {
-  "name": "theodinproject",
+  "name": "library_express",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "node --watch --inspect index.js"
+    "dev":"node --watch --inspect app.js",
+    "prod": "node app.js"
   },
   "keywords": [],
   "author": "",
