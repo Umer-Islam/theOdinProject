@@ -1,6 +1,9 @@
 const express = require("express");
-const fs = require("fs");
 const app = express();
+const fs = require("fs");
+const projectRouter = require("./routes/projectRouter");
+
+app.use('/projects',projectRouter)
 
 const PORT = process.env.PORT || 3000;
 
@@ -12,9 +15,6 @@ app.get("/about", (req, res) => {
 });
 app.get("/contact-me", (req, res) => {
   res.sendFile(__dirname + "/contact-me.html");
-});
-app.get("/projects", (req, res) => {
-  res.sendFile(__dirname + "/projects.html");
 });
 
 app.use((req, res) => res.status(404).sendFile(__dirname + "/404.html"));
