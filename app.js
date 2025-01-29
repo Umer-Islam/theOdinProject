@@ -1,3 +1,5 @@
+const serverless = require("serverless-http");
+
 const express = require("express");
 const app = express();
 const fs = require("node:fs");
@@ -20,3 +22,5 @@ app.use("/new", newRouter);
 app.listen(PORT, () => {
   console.log(`\n Server started on: http://localhost:${PORT}`);
 });
+
+module.exports.handler = serverless(app);
