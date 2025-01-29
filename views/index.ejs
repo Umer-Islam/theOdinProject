@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | message board</title>
+    <link rel="stylesheet" href="../public/styles.css
+    ">
+</head>
+<body>
+    <h1>Message board</h1>
+    <a href="/new"> add a message</a>
+<p>All messages</p>
+<p class="last-message"><i>
+
+    last message by: <%= messages[messages.length-1].user   %> at 
+    <%= messages[messages.length-1].added %>
+</i>
+</p>
+
+<main>
+    <% for (let i = 0;i<messages.length;i++) { %>
+        <li style="list-style: none;">
+            <h3> <%= messages[i].user %></h3>
+            <p> <%= messages[i].text %></p>
+            <h6> <%= messages[i].added %></h6>
+            <p>--------------------------</p>
+        </li>
+        
+        <% } %>
+    </main>
+</body>
+</html>
