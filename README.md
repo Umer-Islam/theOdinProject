@@ -1,5 +1,5 @@
 # theOdinProject
-All the projects from TheOdinProject  module are pushed here.
+All the projects from TheOdinProject modules are pushed here.
 
  js Path  
 | Project Type | Name           | Live Link                       | deployed on |
