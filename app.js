@@ -4,7 +4,7 @@ const {rootGet} = require('./controllers/rootController')
 app.use(express.urlencoded({extended:true}))
 app.use(express.static(__dirname+'/public'))
 const newRouter = require('./routes/newRouter')
-
+require('dotenv').config();
 const PORT = process.env.PORT || 3000
 
 app.get('/',rootGet)
