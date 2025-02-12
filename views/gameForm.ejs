@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/layout.css" />
+  </head>
+  <body>
+    <%- include('partials/header')%>
+    <h2>game details edit page</h2>
+
+    <p>add a new game</p>
+    <form action="/gameForm" method="POST">
+      <label for="name">Game Name:</label>
+      <input type="text" name="name" id="name" required placeholder="Enter game name" />
+    
+      <label for="yearOfRelease">Year of Release:</label>
+      <input type="number" name="yearOfRelease" id="yearOfRelease" required placeholder="e.g., 2022" />
+    
+      <label for="price">Price:</label>
+      <input type="number" name="price" id="price" required placeholder="Enter price" />
+    
+      <button type="submit">Submit</button>
+    </form>
+    
+
+    <%- include('partials/footer')%>
+  </body>
+</html>

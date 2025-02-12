@@ -1,0 +1,17 @@
+<ul>
+    <% games.forEach(game => { %>
+      <li>
+        <%= game.game_id%>.
+        <strong><%= game.name %></strong> - Released in <%= game.release_year %> - $<%= game.price %> 
+        <form action="/" method="post">
+<input type="hidden" name="game_id" value="<%= game.game_id %>">
+<button type="submit">Delete</button>
+        </form>
+        
+      </li>
+
+    <% }) %>
+    
+  </ul>
+  <p><a href="/gameForm"> add a new game</a></p>
+  

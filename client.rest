@@ -1,0 +1,8 @@
+post http://localhost:3000/gameForm
+Content-Type: application/json
+
+{
+    name: "hehe",
+    year:2425,
+    price: 23
+}

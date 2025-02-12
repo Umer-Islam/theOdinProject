@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  color: white;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2 {
+  text-align: center;
+}
+#page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li{
+    list-style: none;
+}
+main {
+  border: white solid 1px;
+  width: 80%;
+  text-align: center;
+}
+#nav-bar {
+  border: white solid 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-direction: row;
+  width: auto;
+}
+nav {
+  border: white solid 1px;
+  width: 20%;
+  text-align: center;
+}
