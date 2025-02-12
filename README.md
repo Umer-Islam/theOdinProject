@@ -6,6 +6,9 @@ All the projects from TheOdinProject  module are pushed here.
 |:-----------:|:-------------:|:---------------------------:|:-----------------------------:|
 | Frontend    | portfolio site | [visit portfolio site](https://umerislam.codes) | netlify|
 | Backend     | message board using express     | [messageBoard](https://odin-message-board-095r.onrender.com/) | render|
+| Backend     | game store     | [Game Store](https://theodinproject-m0r8.onrender.com/
+) | render|
+
 <!-- | Frontend    | E-Commerce UI  | [GitHub](https://github.com/user/ecommerce-ui) | -->
 
 
