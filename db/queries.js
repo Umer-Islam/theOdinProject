@@ -1,4 +1,4 @@
-const { deleteGame } = require("../controllers/rootController");
+
 const pool = require("./pool");
 
 async function getAllGames() {
@@ -21,18 +21,39 @@ async function insertGameData(name, yearOfRelease, price) {
     console.log('data inserted successfully')
   } catch (error) {
     console.log(`error inserting data: ${error}`)
-  
+
+  }
 }
-}
-async function removeGame(game_id){
-  try{
+async function removeGame(game_id) {
+  try {
     console.log(`game id for deleteion in database is : ${game_id}`)
-  await pool.query(`delete from games where game_id = $1`,[game_id])
-  console.log('game deleted from db')
-  }catch(error){
+    await pool.query(`delete from games where game_id = $1`, [game_id])
+    console.log('game deleted from db')
+  } catch (error) {
     console.log(`error: ${error}`)
   }
 }
+async function addCatagory(catagory_name) {
+  try {
+    await pool.query(`insert into catagory(name) values($1)`, [catagory_name])
+    console.log(`catagory added`)
+
+  } catch (error) {
+    console.log(`error: ${error}`)
+
+  }
+}
+
+async function deleteCatagoryFromDb(catagory_name) {
+  try {
+    await pool.query(`delete from catagory where name= $1`, [catagory_name])
+    console.log(`catagory deleted`)
+  } catch (error) {
+    console.log(`error ${error}`)
+  }
+
+}
+
 
 
 
@@ -40,6 +61,8 @@ module.exports = {
   getAllGames,
   getAllCatagories,
   insertGameData,
-  removeGame
+  removeGame,
+  addCatagory,
+  deleteCatagoryFromDb
   //   insertUsername
 };

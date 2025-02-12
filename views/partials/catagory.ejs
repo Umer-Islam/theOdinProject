@@ -3,10 +3,13 @@
 <li>
     <%= catagory.name %>
 </li>
-
+<form action="/catagoryDelete" method="post">
+    <input type="hidden" name="catagory_name" value="<%= catagory.name %>" >
+    <button>Delete</button>
+</form>
 
 
 
 <%})%>
-
+<p><a href="/catagoryForm">add catagory</a></p>
 </ul>
