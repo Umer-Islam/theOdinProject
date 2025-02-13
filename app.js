@@ -1,6 +1,7 @@
 const path = require('path')
 const express = require('express')
 const session = require('express-session')
+const pgSession = require('connect-pg-simple')(session);
 const passport = require('passport')
 const LocalStrategt = require('passport-local').Strategy
 const signUpRouter = require('./routes/signUpRouter')
@@ -15,9 +16,22 @@ app.set('view engine', "ejs")
 
 app.use(express.static('public'))
 app.use(express.json())
-app.use(session({ secret: "cats", resave: false, saveUninitialized: false }))
+app.use(
+    session({
+        store: new pgSession({
+            pool: pool,                // Connection pool
+            tableName: 'session'   // Use another table-name than the default "session" one
+            // Insert connect-pg-simple options here
+        }),
+        secret: process.env.FOO_COOKIE_SECRET,
+        resave: false,
+        cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
+        // Insert express-session options here
+    })
+
+)
 app.use(passport.session())
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: true }))
 passport.use(
 
     new LocalStrategt(async (username, password, done) => {
