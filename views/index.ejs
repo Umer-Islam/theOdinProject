@@ -11,7 +11,7 @@
     <p><a href="/sign-up">go to sign up page</a></p>
     <hr />
     <% if(locals.user){ %>
-    <h1>welcome back <%= user.username %></h1>
+    <h1>welcome back  <span id="username"> <%= user.username %> </span> </h1>
     <a href="/log-out">LOG OUT</a>
     <% } else { %> <%- include('partials/login') %> <% } %>
     <hr />

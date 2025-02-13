@@ -14,3 +14,7 @@ hr {
   height: 3px;
   background: linear-gradient(to right, white, cyan);
 }
+#username{
+  color: brown;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
