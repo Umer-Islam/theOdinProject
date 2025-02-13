@@ -59,7 +59,7 @@ app.use((req, res, next) => {
     next()
 })
 app.get('/', async (req, res) => {
-   
+
     res.render('index', { user: req.user })
 })
 app.post('/log-in',
@@ -83,7 +83,8 @@ app.use((err, req, res, next) => {
     console.error(err.stack)
     res.status(500).send("something broke: Internal Server Error")
 })
-app.listen(3000, () => {
-    console.log('server started on http://localhost:3000')
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+    console.log(`server started on http://localhost:${port}`)
 })
 
