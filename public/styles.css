@@ -12,5 +12,5 @@ body {
 hr {
   border: 0;
   height: 3px;
-  background: linear-gradient(to right, white, grey);
+  background: linear-gradient(to right, white, cyan);
 }
