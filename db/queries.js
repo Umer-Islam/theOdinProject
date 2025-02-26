@@ -25,8 +25,23 @@ const db = {
       console.log(error);
     }
   },
+  getUserByUsername: async (username) => {
+    try {
+      // this will always return a single user no need for array destructuring
+      const userByname = await prisma.user.findUnique({
+        where: { username },
+      });
+      
+      // an object will be returned
+      return userByname;
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
+
 module.exports = db;
+
 // // 4
 // main()
 //   .then(async () => {
