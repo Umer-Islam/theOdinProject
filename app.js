@@ -14,5 +14,5 @@ app.use("/signup", signupRouter);
 const port = 2121 || process.env.PORT;
 
 app.listen(port, () => {
-  console.log(`servers started on: ${port}`);
+  console.log(`servers started on: http://localhost:${port}`);
 });

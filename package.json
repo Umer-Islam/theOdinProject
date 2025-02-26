@@ -20,8 +20,12 @@
   "homepage": "https://github.com/Umer-Islam/theOdinProject#readme",
   "description": "",
   "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "@prisma/extension-accelerate": "^1.2.2",
+    "bcryptjs": "^3.0.2",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "prisma": "^6.4.1"
   }
 }
