@@ -14,10 +14,10 @@ datasource db {
 }
 
 model User {
-  id              Int      @id @default(autoincrement())
-  email           String   @unique
-  username        String  @unique
-  hashed_password String
-  createdAt       DateTime @default(now())
-  
+  id                Int      @id @default(autoincrement())
+  email             String   @unique
+  username          String   @unique
+  hashed_password   String
+  // membership_status String   @default("not_exclusive")
+  createdAt         DateTime @default(now())
 }

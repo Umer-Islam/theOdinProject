@@ -31,12 +31,17 @@ const db = {
       const userByname = await prisma.user.findUnique({
         where: { username },
       });
-      
+
       // an object will be returned
       return userByname;
     } catch (error) {
       console.log(error);
     }
+  },
+  getUserById: async (id) => {
+    const user = await prisma.user.findUnique({ where: { id } });
+
+    return user;
   },
 };
 
