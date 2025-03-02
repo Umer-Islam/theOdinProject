@@ -1,8 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 body {
   background-color: black;
   color: white;
@@ -10,4 +5,27 @@ body {
 }
 span {
   color: blue;
+}
+
+.display-messages {
+  border: solid white 1px;
+
+  margin: 0 20%;
+  border-radius: 0.5625rem;
+}
+.message-heading{
+  text-align: center;
+  color: palevioletred;
+}
+.message {
+  padding: 5px;
+  text-align: center;
+  margin: 3px;
+  border: 1px solid white;
+
+}
+
+.message-date {
+  font-size: smaller;
+  color: peachpuff;
 }

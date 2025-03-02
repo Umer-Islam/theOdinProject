@@ -12,6 +12,7 @@ const bcrypt = require("bcryptjs");
 const logoutRouter = require("./routes/logoutRouter");
 const updateUserRouter = require("./routes/updateUserRouter");
 const addMessageRouter = require("./routes/addMessageRouter");
+const makeAdminRouter = require("./routes/makeAdminRouter");
 app.set("views", path.join(__dirname + "/views"));
 app.set("view engine", "ejs");
 app.use(session({ secret: "cats", resave: false, saveUninitialized: false }));
@@ -58,6 +59,7 @@ app.use("/login", loginRouter);
 app.use("/logout", logoutRouter);
 app.use("/update-status", updateUserRouter);
 app.use("/add-message", addMessageRouter);
+app.use("/make-admin", makeAdminRouter);
 const port = 2121 || process.env.PORT;
 
 app.listen(port, () => {

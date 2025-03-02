@@ -1,10 +1,22 @@
-<main>
+<main class="display-messages">
+  <h1 class="message-heading">Messages</h1>
   <% messages.forEach(message => { %>
-  <div>
+  <div class="message">
+    <% if (locals.user) { %>
+    <p class="message-date">created at: <%= message.createdAt %></p>
+    <% } %> <% if (locals.user) { %>
+
     <p>creatorId: <%= message.creator.username %></p>
+    <% } %>
     <p><%= message.message %></p>
   </div>
-  <% }) %>
+  <% if (user) { %> <% if (user.is_admin) { %>
+
+  <form action="/add-message/delete" method="post">
+    <input type="hidden" name="message_id" value="<%= message.id %>" />
+    <button>Delete</button>
+  </form>
+  <% } %> <% } %> <% }) %>
 
   <main></main>
 </main>

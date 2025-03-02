@@ -63,7 +63,7 @@ const db = {
     await prisma.messageBoard.create({
       data: {
         creatorId,
-        message: "heheh",
+        message,
       },
     });
   },
@@ -77,8 +77,26 @@ const db = {
     // console.log(user);
     return user;
   },
+  makeAdmin: async (id) => {
+    return await prisma.user.update({
+      where: { id },
+      data: { is_admin: true },
+    });
+  },
+  isAdmin: async (userId) => {
+    const is_admin = await prisma.user.findUnique({
+      where: { id: userId },
+      select: { is_admin: true },
+    });
+    // console.log(is_admin);
+    return is_admin;
+  },
+  deleteMessageById: async (message_id) => {
+    await prisma.messageBoard.delete({ where: { id: message_id } });
+  },
 };
-// db.getAllMessages();
+// db.isAdmin(1);
+// db.deleteMessageById(3)
 module.exports = db;
 
 // // 4
