@@ -43,8 +43,42 @@ const db = {
 
     return user;
   },
-};
+  updateMemberShipStatus: async (id) => {
+    await prisma.user.update({
+      where: { id },
+      data: { membership_status: "exclusive" },
+    });
+  },
+  getAllMessages: async () => {
+    const messages = await prisma.messageBoard.findMany({
+      include: {
+        creator: { select: { username: true } },
+      },
+    });
+    // console.log(messages);
 
+    return messages;
+  },
+  createMessage: async (creatorId, message) => {
+    await prisma.messageBoard.create({
+      data: {
+        creatorId,
+        message: "heheh",
+      },
+    });
+  },
+
+  getUsernameByMessageCreatorId: async (creatorId) => {
+    const user = await prisma.user.findUnique({
+      where: { id: creatorId },
+      select: { username: true },
+    });
+
+    // console.log(user);
+    return user;
+  },
+};
+// db.getAllMessages();
 module.exports = db;
 
 // // 4

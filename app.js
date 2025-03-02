@@ -10,6 +10,8 @@ const session = require("express-session");
 const db = require("./db/queries");
 const bcrypt = require("bcryptjs");
 const logoutRouter = require("./routes/logoutRouter");
+const updateUserRouter = require("./routes/updateUserRouter");
+const addMessageRouter = require("./routes/addMessageRouter");
 app.set("views", path.join(__dirname + "/views"));
 app.set("view engine", "ejs");
 app.use(session({ secret: "cats", resave: false, saveUninitialized: false }));
@@ -48,10 +50,14 @@ passport.deserializeUser(async (id, done) => {
     done(error);
   }
 });
+
+// app.use(express.bodyParser());
 app.use("/", rootRouter);
 app.use("/signup", signupRouter);
 app.use("/login", loginRouter);
 app.use("/logout", logoutRouter);
+app.use("/update-status", updateUserRouter);
+app.use("/add-message", addMessageRouter);
 const port = 2121 || process.env.PORT;
 
 app.listen(port, () => {

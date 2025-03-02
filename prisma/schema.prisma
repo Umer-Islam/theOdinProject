@@ -14,10 +14,20 @@ datasource db {
 }
 
 model User {
-  id                Int      @id @default(autoincrement())
-  email             String   @unique
-  username          String   @unique
+  id                Int            @id @default(autoincrement())
+  email             String         @unique
+  username          String         @unique
   hashed_password   String
-  // membership_status String   @default("not_exclusive")
-  createdAt         DateTime @default(now())
+  membership_status String         @default("not_exclusive")
+  createdAt         DateTime       @default(now())
+  messages          MessageBoard[]
+}
+
+model MessageBoard {
+  id              Int      @id @default(autoincrement())
+  message         String
+  createdAt       DateTime @default(now())
+  creatorId       Int
+  creator         User     @relation(fields: [creatorId], references: [id])
+ 
 }

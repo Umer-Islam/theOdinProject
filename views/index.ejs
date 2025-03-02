@@ -9,8 +9,11 @@
   <body>
     <h1>Home</h1>
     <% if (locals.user) {%>
-    <h1>WELCOME BACK <%= user.username %></h1>
+    <h1>WELCOME BACK <span> <%= user.username %> </span></h1>
+    <p>membership status <span><%= user.membership_status %></span></p>
+    <%- include('partials/addMessage') %>
     <a href="/logout">LOG OUT</a>
+
     <% } else { %>
     <h1>please log in</h1>
     <form action="/login" method="POST">
@@ -23,5 +26,6 @@
     <%}%>
     <p><a href="/signup">Sign Up</a></p>
     <!-- <p><a href="/login">LogIn</a></p> -->
+     <%- include('partials/viewMessages') %>
   </body>
 </html>
