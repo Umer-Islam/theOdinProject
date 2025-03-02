@@ -5,10 +5,8 @@ All the projects from TheOdinProject modules are pushed here.
 <div style="background-color: black; padding: 10px; border-radius: 5px; font-family:verdana;" >
   <strong>⚠️ Note:</strong> please wait for 50 seconds. Render instances shutdown after some time.
 </div>
-<div style="margin:10px;padding:1px;background-color:gray;width:60px; text-align:center;border-radius:5px;font-family:verdana;color:yellow">
-js Path  
 
-</div>
+`js-path`
 
 | Project Type | Name | Live Link | deployed on |
 |:-----------:|:-------------:|:---------------------------:|:-----------------------------:|
