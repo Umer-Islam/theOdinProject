@@ -8,11 +8,12 @@
   </head>
   <body>
     <h1>update user</h1>
-    <p>enter the code to become a exclusive member</p>
+    <p>enter the code <span>hehe</span> to become a exclusive member</p>
     <form action="/update-status" method="post">
       <div>
         <label for="passcode">passcode</label
         ><input type="text" name="passcode" id="" />
+        <input type="hidden" name="user_id" value="<%= user.id %>" />
       </div>
       <div>
         <button type="submit">updateStatus</button>

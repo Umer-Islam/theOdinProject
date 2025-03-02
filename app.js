@@ -29,7 +29,9 @@ passport.use(
       if (!user) {
         return done(null, false, { message: "incorrect username" });
       }
-      if (await !bcrypt.compare(password, user.hashed_password)) {
+      const match = await bcrypt.compare(password, user.hashed_password);
+      // console.log(`check if passwords match: ${match}`);
+      if (!match) {
         return done(null, false, { message: "incorrect password" });
       }
       return done(null, user);
@@ -39,12 +41,12 @@ passport.use(
   })
 );
 passport.serializeUser((user, done) => {
-  console.log("serializeUser called...");
+  // console.log("serializeUser called...");
   done(null, user.id);
 });
 passport.deserializeUser(async (id, done) => {
   try {
-    console.log("deserializeUser called");
+    // console.log("deserializeUser called");
     const user = await db.getUserById(id);
     done(null, user);
   } catch (error) {

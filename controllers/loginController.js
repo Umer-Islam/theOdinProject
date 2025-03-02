@@ -9,7 +9,7 @@ const loginController = {
       const { username, password } = req.body;
       const user = await db.getUserByUsername(username);
       const hashed_password = user.hashed_password;
-      console.log(hashed_password);
+      // console.log(hashed_password);
       console.log(`password: ${password}, hashed_password: ${hashed_password}`);
       const match = await bcrypt.compareSync(password, hashed_password);
 

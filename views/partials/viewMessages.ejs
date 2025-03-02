@@ -6,17 +6,18 @@
     <p class="message-date">created at: <%= message.createdAt %></p>
     <% } %> <% if (locals.user) { %>
 
-    <p>creatorId: <%= message.creator.username %></p>
+    <p>created by: <span><%= message.creator.username %> </span></p>
     <% } %>
     <p><%= message.message %></p>
   </div>
-  <% if (user) { %> <% if (user.is_admin) { %>
+  <div class="delete-message">
+    <% if (user) { %> <% if (user.is_admin) { %>
 
-  <form action="/add-message/delete" method="post">
-    <input type="hidden" name="message_id" value="<%= message.id %>" />
-    <button>Delete</button>
-  </form>
-  <% } %> <% } %> <% }) %>
-
-  <main></main>
+    <form action="/add-message/delete" method="post">
+      <input type="hidden" name="message_id" value="<%= message.id %>" />
+      <button>Delete</button>
+    </form>
+    <% } %>
+    </div>
+    <% } %> <% }) %>
 </main>

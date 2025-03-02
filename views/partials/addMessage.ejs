@@ -3,7 +3,7 @@
 <form action="/add-message" method="post">
   <input type="hidden" name="creatorId" value="<%= user.id %>" />
   <label for="message"> add message</label>
-  <input type="text" name="message" id="" />
+  <input type="text" name="message" id="" required />
   <button type="submit">Add</button>
 </form>
 

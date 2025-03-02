@@ -12,6 +12,17 @@
     <% if (locals.user) {%>
     <h1>WELCOME BACK <span> <%= user.username %> </span></h1>
     <p>membership status <span><%= user.membership_status %></span></p>
+    <% if (!(user.membership_status=="exclusive")) { %>
+    <p>become <a href="/update-status">exclusive member</a></p>
+    <% } %> <% if (user.membership_status=="exclusive") { %> <%
+    if(!user.is_admin) { %>
+    <p><a href="/make-admin">become admin</a></p>
+
+    <% } %> <% } %> <% if (user) { %> <% if (user.is_admin) { %>
+    <p>you are <span class="admin">admin</span></p>
+    <% } %> <% } %>
+
+    <!-- whatever -->
     <%- include('partials/addMessage') %>
     <a href="/logout">LOG OUT</a>
 

@@ -77,6 +77,12 @@ const db = {
     // console.log(user);
     return user;
   },
+  makeExclusive: async (id) => {
+    return await prisma.user.update({
+      where: { id },
+      data: { membership_status: "exclusive" },
+    });
+  },
   makeAdmin: async (id) => {
     return await prisma.user.update({
       where: { id },
@@ -97,6 +103,7 @@ const db = {
 };
 // db.isAdmin(1);
 // db.deleteMessageById(3)
+// db.makeExclusive(2);
 module.exports = db;
 
 // // 4
