@@ -8,13 +8,13 @@ All the projects from TheOdinProject modules are pushed here.
 
 `js-path`
 
-| Project Type | Name | Live Link | deployed on |
-|:-----------:|:-------------:|:---------------------------:|:-----------------------------:|
-| Frontend | portfolio site | [visit portfolio site](https://umerislam.codes) | netlify|
-| Backend | message board using express | [messageBoard](https://odin-message-board-095r.onrender.com/) | render|
-| Backend | game store | [Game Store](https://theodinproject-m0r8.onrender.com/) | render|
-| Backend | auth | [basic auth](https://odin-basic-auth.onrender.com/) | render|
-| Backend | message board with admin | [exclusive club](https://theodinproject-1.onrender.com/)| render|
+| Project Type | Name                         | Live Link                                                                 | Code Link                      | Deployed On |
+|:------------:|:----------------------------:|:-------------------------------------------------------------------------:|:------------------------------:|:-----------:|
+| Frontend     | Portfolio Site               | [Visit Portfolio Site](https://umerislam.codes)                          | [GitHub](https://github.com/Umer-Islam/umer-islam.github.io)                    | Netlify     |
+| Backend      | Message Board using Express  | [MessageBoard](https://odin-message-board-095r.onrender.com/)           | [GitHub](https://github.com/Umer-Islam/theOdinProject/tree/message-board?tab=readme-ov-file)                    | Render      |
+| Backend      | Game Store                   | [Game Store](https://theodinproject-m0r8.onrender.com/)                 | [GitHub](https://github.com/Umer-Islam/theOdinProject/tree/game_store?tab=readme-ov-file)                    | Render      |
+| Backend      | Auth                         | [Basic Auth](https://odin-basic-auth.onrender.com/)                     | [GitHub](https://github.com/Umer-Islam/theOdinProject/tree/basic_auth?tab=readme-ov-file)                    | Render      |
+| Backend      | Message Board with Admin     | [Exclusive Club](https://theodinproject-1.onrender.com/)                | [GitHub](https://github.com/Umer-Islam/theOdinProject/tree/exclusive_clubhouse?tab=readme-ov-file)                    | Render      |
 
 <!-- | Frontend    | E-Commerce UI  | [GitHub](https://github.com/user/ecommerce-ui) | -->
 
